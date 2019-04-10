@@ -14,6 +14,7 @@ using namespace std;
 
 int main()
 {
+
 	setlocale(0, "rus");
 	 	
 	cout << "¬ведите номер задани€, дл€ выхода нажминие 5" << endl;
