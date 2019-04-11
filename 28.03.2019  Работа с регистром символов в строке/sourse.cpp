@@ -94,18 +94,20 @@ int main()
 		//используем функции islower  является ли он строчным символом
 		//и tolower  для преобразования строчных букв в прописные после точки
 		
+		// Переменная "следующую встреченную букву нужно сделать большой"
 		bool upperReq = true;
 
 		for (int i = 0; i < strlen(mas); i++)
 		{
 
-			if (upperReq && isupper(mas[i]) || islower[i]) {
-				
-				toupper(mas[i]);
+			// Если следующую букву нужно сделать большой и мы встретили букву, то
+			if (upperReq && (isupper(mas[i]) || islower(mas[i]))) {
+				// Сделать большой и отметить, что мы отработали upperReq
+				mas[i] = toupper(mas[i]);
 				upperReq = false;
 			}
-
-			if (mas[i] == '.'){
+			// Когда встречаем точку, включаем
+			else if (mas[i] == '.'){
 				upperReq = true;
 			}
 		}
