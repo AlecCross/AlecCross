@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include <stdlib.h>
 using namespace std;
-//123
+
 /*Есть некоторый текст. Используя стандартные строковые функции из
 библиотеки языка C++
 ? Найдите и замените вхождение некоторого слова на заданное
@@ -94,20 +94,15 @@ int main()
 		//используем функции islower  является ли он строчным символом
 		//и tolower  для преобразования строчных букв в прописные после точки
 		
-		for (int i = 0; i < strlen(mas);i++)
-		{
-			if (i == 0)
-			{
-			
-					toupper(mas[i]);
-			}
-			else if (mas[i] == '.')//&&mas[i+1]==' '
-			{
-				tolower(mas[i+2]);
-			}
-			else
-			{
+		bool upperReq = true;
 
+		for (int i = 0; i < strlen(mas); i++)
+		{
+
+			if (upperReq && isupper(mas[i]) || islower[i]) {
+				
+				toupper(mas[i]);
+				upperReq = false;
 			}
 		}
 		cout << mas << endl;
