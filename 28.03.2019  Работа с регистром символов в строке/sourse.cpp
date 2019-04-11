@@ -104,6 +104,10 @@ int main()
 				toupper(mas[i]);
 				upperReq = false;
 			}
+
+			if (mas[i] == '.'){
+				upperReq = true;
+			}
 		}
 		cout << mas << endl;
 	}
